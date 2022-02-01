@@ -49,6 +49,9 @@ table {
 
 /* body */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+html {
+    box-sizing: border-box;
+}
 path {
     fill: #fff;
 }
@@ -100,6 +103,7 @@ main {
 }
 /* main navbar */
 .mainNav {
+    height: 17%;
     background-color: #fff;
     box-shadow: 0 4px 5px -2px gray;
 }
@@ -183,4 +187,67 @@ main {
     color: #fff;
     font-weight: 600;
     margin-left: 1rem;
+}
+/* main grid */
+.mainGrid {
+    height: calc(100% - 17%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+/* projects */
+.projects {
+    grid-column: span 3;
+    grid-row: span 2;
+    padding-left: 20px;
+    padding-top: 1rem;
+}
+.projects svg path {
+    fill: #000;
+}
+.projectsHeader {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.projectsGrid {
+    display: grid;
+    height: 90%;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, calc(100% / 3));
+}
+.project {
+    background-color: #fff;
+    border-left: 8px solid #fb923c;
+    border-radius: 0.25rem;
+    position: relative;
+    font-family: 'Comfoorta', sans-serif;
+}
+.topProject {
+    margin: 2rem 1rem;
+}
+.projectTitle {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.projectSummary {
+    font-size: 0.75rem;
+    line-height: 1.25;
+    color: #737373;
+}
+.bottomProject {
+    display: flex;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+.bottomProject * {
+    margin-left: 1rem;
+}
+
+
+@media (min-width:1025px) {
+    .searchDiv {
+        width: 80%;
+    }
 }
